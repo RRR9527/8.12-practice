@@ -1,7 +1,8 @@
 #include "UART_IRQ_Handler.h"
+#include "math.h"
 
 uint8_t rx_buffer[5] = {0};
-
+/*
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
    if (huart->Instance == USART1)
@@ -19,7 +20,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         HAL_UART_Receive_IT(&huart1, rx_buffer, 5);
    }
 }
-
+*/
+/*
 void UART_Start_Receive(void)
 {
     // HAL_UART_ReceiveToIdle_IT(&huart1, rx_buffer, sizeof(rx_buffer));
@@ -30,4 +32,9 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
     if (huart->Instance == USART1){
         HAL_UART_ReceiveToIdle_IT(&huart1, rx_buffer, sizeof(rx_buffer));
     }
+}
+*/
+
+void UART_send_sin(float value){
+    HAL_UART_Transmit(&huart1, (uint8_t*)&value, 4, 10);
 }

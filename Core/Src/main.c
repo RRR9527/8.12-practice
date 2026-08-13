@@ -94,7 +94,8 @@ int main(void)
   MX_TIM3_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  float sin_value;
+  uint8_t t_ms;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,6 +105,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    sin_value = sinf(pi * t_ms * 0.01);
+    UART_send_sin(sin_value);
+    t_ms = (t_ms + 1) % 200U;
   }
   /* USER CODE END 3 */
 }

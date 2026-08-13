@@ -4,6 +4,8 @@
 #include "main.h"
 #include "usart.h"
 
-void USART_Start_Receive(void);
+#define pi 3.14159
+
+// void USART_Start_Receive(void);
 
 #endif
