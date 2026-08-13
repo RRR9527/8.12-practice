@@ -10,7 +10,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)  // 接收指定长度�
    {
         if (rx_buffer[0] == 0xFF)
         {
-            // Process the received data
+            // Process the received datag
             for (uint8_t i = 1; i < 5; i++)
             {
                 if (rx_buffer[i] == 1){
@@ -30,7 +30,7 @@ void UART_Start_Receive(void)
     // HAL_UART_Receive_IT(&huart1, rx_buffer, 5);  // 对于接收指定长度数据情况下的初始化
     // HAL_UART_ReceiveToIdle_IT(&huart1, rx_buffer, sizeof(rx_buffer));   // 空闲中断的接收的初始化
     // HAL_UART_Receive_DMA(&huart1, rx_buffer, 5);
-    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_buffer, sizeof(tx_buffer));
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_buffer, sizeof(rx_buffer));
 } 
 
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){   // 空闲中断。这个size是自动获取并传入的，所以可以不定长度
