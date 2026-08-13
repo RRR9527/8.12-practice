@@ -2,6 +2,7 @@
 "8.12\startup_stm32f405xx.o"
 "8.12\main.o"
 "8.12\gpio.o"
+"8.12\dma.o"
 "8.12\tim.o"
 "8.12\usart.o"
 "8.12\stm32f4xx_it.o"
@@ -24,6 +25,11 @@
 "8.12\stm32f4xx_hal_exti.o"
 "8.12\stm32f4xx_hal_uart.o"
 "8.12\system_stm32f4xx.o"
+"8.12\beep.o"
+"8.12\led.o"
+"8.12\exit_irq_handler.o"
+"8.12\time_irq_handler.o"
+"8.12\uart_irq_handler.o"
 --strict --scatter "8.12\8_12.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

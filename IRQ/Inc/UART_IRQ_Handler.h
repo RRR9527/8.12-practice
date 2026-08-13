@@ -4,6 +4,7 @@
 #include "main.h"
 #include "usart.h"
 
-void USART_Start_Receive(void);
+void UART_Start_Receive(void);
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size);
 
 #endif

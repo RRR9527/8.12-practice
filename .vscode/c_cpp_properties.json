@@ -8,9 +8,13 @@
                 "d:\\RC\\8.12\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
                 "d:\\RC\\8.12\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
                 "d:\\RC\\8.12\\Drivers\\CMSIS\\Include",
+                "d:\\RC\\8.12\\HDL\\Inc",
+                "d:\\RC\\8.12\\IRQ\\Inc",
                 "d:\\RC\\8.12\\MDK-ARM",
                 "d:\\RC\\8.12\\Core\\Src",
                 "d:\\RC\\8.12\\Drivers\\STM32F4xx_HAL_Driver\\Src",
+                "d:\\RC\\8.12\\HDL\\Src",
+                "d:\\RC\\8.12\\IRQ\\Src",
                 "${default}"
             ],
             "defines": [
