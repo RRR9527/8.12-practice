@@ -31,4 +31,4 @@
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   ..\IRQ\Inc\UART_IRQ_Handler.h ..\Core\Inc\usart.h \
   D:\Keil5\ARM\ARMCLANG\Bin\..\include\math.h ..\Core\Inc\dma.h \
-  ..\Core\Inc\tim.h ..\Core\Inc\gpio.h
+  ..\Core\Inc\tim.h ..\Core\Inc\gpio.h ..\HDL\Inc\BEEP.h
