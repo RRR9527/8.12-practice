@@ -77,7 +77,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  UART_Start_Receive();
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -94,7 +94,8 @@ int main(void)
   MX_TIM3_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  extern uint8_t Beep_Trigger;
+  extern volatile uint8_t Beep_Trigger;
+  UART_Start_Receive();
   /* USER CODE END 2 */
 
   /* Infinite loop */

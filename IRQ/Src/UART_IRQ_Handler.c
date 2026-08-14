@@ -1,9 +1,10 @@
 #include "UART_IRQ_Handler.h"
 
-uint8_t rx_buffer[5] = {0};  // 接收到的信息
-uint8_t tx_buffer[5] = {0};  // 发送出去的信息
-uint8_t Beep_Trigger;
+uint8_t rx_buffer[100] = {0};  // 接收到的信息
+uint8_t tx_buffer[100] = {0};  // 发送出去的信息
+extern volatile uint8_t Beep_Trigger;
 
+/*
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)  // 接收指定长度的数据。提前规定好了接收5个字节。第一个字节用于校验
 {
    if (huart->Instance == USART1)
@@ -24,6 +25,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)  // 接收指定长度�
         HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_buffer, sizeof(rx_buffer)); // DMA，空闲中断
     }
 }
+*/
 
 void UART_Start_Receive(void)
 {
@@ -44,7 +46,8 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){   // 
                     Beep_Trigger ++;  
                 }
             }
-            HAL_UART_Transmit_DMA(&huart1, tx_buffer, sizeof(tx_buffer));
+            memcpy(tx_buffer, rx_buffer, Size);
+            HAL_UART_Transmit_DMA(&huart1, tx_buffer, Size);
         }
         HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_buffer, sizeof(rx_buffer));  // 重启接收（空闲中断）
     }

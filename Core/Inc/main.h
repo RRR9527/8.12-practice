@@ -32,8 +32,10 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "BEEP.h"
-/* USER CODE END Includes */
 #include "UART_IRQ_Handler.h"
+#include <string.h>
+/* USER CODE END Includes */
+
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
 
