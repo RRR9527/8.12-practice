@@ -31,5 +31,5 @@
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   ..\HDL\Inc\BEEP.h ..\Core\Inc\gpio.h ..\IRQ\Inc\UART_IRQ_Handler.h \
-  ..\Core\Inc\usart.h ..\IRQ\Inc\TIME_IRQ_Handler.h ..\Core\Inc\tim.h \
-  ..\HDL\Inc\LED.h
+  ..\Core\Inc\usart.h D:\Keil5\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\IRQ\Inc\TIME_IRQ_Handler.h ..\Core\Inc\tim.h ..\HDL\Inc\LED.h

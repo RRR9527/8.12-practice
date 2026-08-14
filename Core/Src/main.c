@@ -96,6 +96,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   extern volatile uint8_t Beep_Trigger;
   UART_Start_Receive();
+  Beep_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
