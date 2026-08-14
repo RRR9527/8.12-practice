@@ -19,8 +19,8 @@ void Beep_Alarm(uint8_t times){
     uint8_t i;
     for (i=0; i < times; i++){
         BEEP_ON();
-        HAL_Delay(40);
+        HAL_Delay(100);
         BEEP_OFF();
-        HAL_Delay(40);
+        HAL_Delay(100);
     }
 }
