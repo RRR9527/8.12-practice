@@ -6,6 +6,8 @@
 
 #define pi 3.14159
 
+void UART_send_sin(float value);
+
 // void USART_Start_Receive(void);
 
 #endif

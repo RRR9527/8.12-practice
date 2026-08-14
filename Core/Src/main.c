@@ -108,6 +108,7 @@ int main(void)
     sin_value = sinf(pi * t_ms * 0.01);
     UART_send_sin(sin_value);
     t_ms = (t_ms + 1) % 200U;
+    HAL_Delay(1U);
   }
   /* USER CODE END 3 */
 }
